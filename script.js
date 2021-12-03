@@ -2,7 +2,7 @@ var list_data = {
 	all : {
 		id : 0,
 		first : 1,
-		last : 721
+		last : 898
 	},
 	gen1 : {
 		id : 1,
@@ -33,6 +33,16 @@ var list_data = {
 		id : 6,
 		first : 650,
 		last : 721
+	},
+	gen7: {
+		id : 7,
+		first : 722,
+		last : 809
+	},
+	gen8 : {
+		id : 8,
+		first : 810,
+		last : 898
 	},
 	test: {
 		id : 7,
@@ -110,8 +120,10 @@ function getPokemonList() {
 
 initilizeGame = function() {
 	//preload pokemon images
-	loadImage(1);
-	
+	//loadImage(1);
+	document.getElementById('loader-screen').style.display = 'none';
+	document.getElementById('game').style.display = 'block';
+	document.getElementById('settings').style.display = 'block';
 	//set event handelers
 	var nodes = document.getElementsByClassName('egg');
 	for(i = 0; i < nodes.length; i++) {
